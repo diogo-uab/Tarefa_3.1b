@@ -1,0 +1,98 @@
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Especialistas</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#663399',
+          },
+        },
+      },
+    };
+  </script>
+  <script src="../js/header-dropdown.js"></script>
+  <script src="../js/experts.js"></script>
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+</head>
+<body>
+  <main class="flex flex-col h-full">
+    <header class="flex flex-row items-center justify-between pr-4 bg-accent">
+      <div class="flex flex-row items-center">
+        <img src="../assets/logo.png" alt="Animalec logo" class="h-16">
+        <span class="font-black text-2xl text-white">Animalec</span>
+      </div>
+      <nav>
+        <button type="button" class="dropdown-toggle sm:hidden flex items-center">
+          <i class="pointer-events-none fa fa-solid fa-bars fa-2x text-white"></i>
+        </button>
+        <div class="dropdown-menu absolute right-5 sm:right-0 py-4 px-12 sm:px-6 rounded-md shadow-2xl shadow-black bg-purple-900 hidden sm:shadow-none sm:bg-transparent sm:relative sm:flex sm:w-auto">
+          <ul class="flex sm:flex-row flex-col gap-4">
+            <li>
+              <a href="#" class="text-white cursor-not-allowed">Animais</a>
+            </li>
+            <li>
+              <a href="#" class="text-white cursor-not-allowed">Quizzes</a>
+            </li>
+            <li>
+              <a href="#" class="text-white cursor-not-allowed">Contacto</a>
+            </li>
+            <li>
+              <a href="../index.html" class="text-white">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="flex flex-1 flex-col items-center max-w-screen-md py-4 sm:px-4 self-center w-full">
+      <h1 class="font-black text-3xl text-center">GESTÃO DE ESPECIALISTAS</h1>
+      <div class="my-10 h-0.5 w-8/12 bg-slate-200"></div>
+      <div class="w-full">
+        <div class="flex w-full flex-wrap mb-5 gap-2 font-semibold justify-center sm:justify-normal px-4 sm:px-0">
+          <a href="./experts-add.html" class="border border-gray-300 rounded-md py-2 px-3 text-accent">
+            <i class="fa fa-solid fa-plus"></i>
+            <span>ADICIONAR ESPECIALISTA</span>
+          </a>
+          <a href="../index.html" class="border border-gray-300 rounded-md py-2 px-3 text-accent">
+            <i class="fa fa-solid fa-bars"></i>
+            <span>MENU PRINCIPAL</span>
+          </a>
+        </div>
+        <table id="data-table" class="table-auto w-full">
+          <thead class="bg-accent text-white">
+            <tr>
+              <th class="text-start px-2 py-3">NOME</th>
+              <th class="text-start px-2 py-3">ESPECIALIDADE</th>
+              <th class="text-start px-2 py-3">AÇÕES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="odd:bg-gray-100">
+              <td class="px-2">Lorem Ipsum</td>
+              <td class="px-2">Lorem Ipsum dolor</td>
+              <td class="px-2">
+                <button class="cursor-not-allowed border border-gray-300 rounded-md py-2 px-3 my-2 text-accent">
+                  <i class="fa fa-solid fa-pencil"></i>
+                  <span class="hidden sm:inline">Editar</span>
+                </button>
+                <button class="cursor-not-allowed border border-gray-300 rounded-md py-2 px-3 my-2 text-accent">
+                  <i class="fa fa-solid fa-search"></i>
+                  <span class="hidden sm:inline">Ver</span>
+                </button>
+                <button class="table-row-remove-action border border-gray-300 rounded-md py-2 px-3 my-2 text-accent">
+                  <i class="fa fa-solid fa-trash"></i>
+                  <span class="hidden sm:inline">Remover</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Animalec</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#663399',
+          },
+        },
+      },
+    };
+  </script>
+  <script src="js/header-dropdown.js"></script>
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+</head>
+<body>
+  <main class="flex flex-col h-full">
+    <header class="flex flex-row items-center justify-between pr-4 bg-accent">
+      <div class="flex flex-row items-center">
+        <img src="assets/logo.png" alt="Animalec logo" class="h-16">
+        <span class="font-black text-2xl text-white">Animalec</span>
+      </div>
+      <nav>
+        <button type="button" class="dropdown-toggle sm:hidden flex items-center">
+          <i class="pointer-events-none fa fa-solid fa-bars fa-2x text-white"></i>
+        </button>
+        <div class="dropdown-menu absolute right-5 sm:right-0 py-4 px-12 sm:px-6 rounded-md shadow-2xl shadow-black bg-purple-900 hidden sm:shadow-none sm:bg-transparent sm:relative sm:flex sm:w-auto">
+          <ul class="flex sm:flex-row flex-col gap-4">
+            <li>
+              <a href="#" class="text-white cursor-not-allowed">Animais</a>
+            </li>
+            <li>
+              <a href="#" class="text-white cursor-not-allowed">Quizzes</a>
+            </li>
+            <li>
+              <a href="#" class="text-white cursor-not-allowed">Contacto</a>
+            </li>
+            <li>
+              <a href="./index.html" class="text-white">Admin</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="flex flex-1 flex-col items-center max-w-screen-md p-4 self-center w-full">
+      <h1 class="font-black text-3xl text-center">GESTÃO DO ANIMALEC</h1>
+      <div class="my-10 h-0.5 w-8/12 bg-slate-200"></div>
+      <div class="grid grid-cols-2 gap-4">
+        <a class="flex flex-col items-center justify-between h-28 min-w-28 p-2 rounded-md text-white bg-accent cursor-not-allowed">
+          <span>UTILIZADORES</span>
+          <i class="fa fa-solid fa-users fa-3x"></i>
+        </a>
+        <a class="flex flex-col items-center justify-between h-28 min-w-28 p-2 rounded-md text-white bg-accent cursor-not-allowed">
+          <span>ANIMAIS</span>
+          <i class="fa fa-solid fa-paw fa-3x"></i>
+        </a>
+        <a class="flex flex-col items-center justify-between h-28 min-w-28 p-2 rounded-md text-white bg-accent cursor-not-allowed">
+          <span>QUIZZES</span>
+          <i class="fa fa-solid fa-file-text fa-3x"></i>
+        </a>
+        <a class="flex flex-col items-center justify-between h-28 min-w-28 p-2 rounded-md text-white bg-accent cursor-not-allowed">
+          <span>QUESTÕES</span>
+          <i class="fa fa-solid fa-question-circle fa-3x"></i>
+        </a>
+        <a href="pages/experts.html" class="flex flex-col items-center justify-between h-28 min-w-28 p-2 rounded-md text-white bg-accent">
+          <span>ESPECIALISTAS</span>
+          <i class="fa fa-solid fa-graduation-cap fa-3x"></i>
+        </a>
+        <a href="pages/sponsors.html" class="flex flex-col items-center justify-between h-28 min-w-28 p-2 rounded-md text-white bg-accent">
+          <span>PATROCINADORES</span>
+          <i class="fa fa-solid fa-credit-card-alt fa-3x"></i>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
